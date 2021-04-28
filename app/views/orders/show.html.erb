@@ -4,6 +4,12 @@
     <h1>Order #<%= @order.id %></h1>
   </header>
 
+  <div>
+    <% @order.line_items.each do |line_item| %>
+      <%= render line_item.product_id %>
+    <% end %>
+  </div>
+
   <div class="order-summary jumbotron">
     <h4>Thank you for your order!</h4>
   </div>

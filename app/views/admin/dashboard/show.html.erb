@@ -1,15 +1,18 @@
-<h1>Admin Dashboard</h1>
-<h2>
-  Number of categories in the database
-  <%= @category.count %>
-</h2>
+<section class="admin-products-index">
+  <header class="page-header">
+    <h1>Admin &raquo; All Products</h1>
+  </header>
+  <h2>
+    Number of categories in the database: <%= @category.count %>
+  </h2>
   <% @category.each do |cat| %>
     <%= cat.name %><br>
   <% end %>
-<h2>
-  Number of products in the database
-  <%= @products.size %>
-</h2>
+  <h2>
+    Number of products in the database: <%= @products.size %>
+  </h2>
   <% @products.each do |product| %>
     <%= product.name %><br>
   <% end %>
+    
+</section>
